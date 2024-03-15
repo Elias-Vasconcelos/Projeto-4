@@ -1,0 +1,34 @@
+@use '../config/variaveis.scss';
+@use '../config/reset.scss';
+
+.plans{
+
+    &-list{
+        &__card{
+            &__iten{
+                text-decoration: none;
+                &__title{
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    color: variaveis.$CorDaLetra ;
+                }
+                &__price{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: variaveis.$CorDaLetra;
+                }
+                &__caption{
+                    font-size: 8px;
+                    color: variaveis.$SmallText ;
+                }
+                &__button{
+                    width: 144px;
+                    height: 24px;
+                    background-color: variaveis.$CorFundoButton;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
