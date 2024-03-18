@@ -82,16 +82,7 @@
             &__iten{
                 display: flex;
                 flex-direction: column;
-                &__title{
-                    position: relative;
-                }
-                &__price{
-                    position: relative;
-                }
-                &__caption{
-                    position: relative;
-                }
-                &__button{
+                &__text{
                     position: relative;
                 }
                 &__img{
