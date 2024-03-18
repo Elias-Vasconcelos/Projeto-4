@@ -2,7 +2,15 @@
 @use '../config/reset.scss';
 
 .plans{
-
+    
+    h4{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        color: variaveis.$CorFundoButton;
+        font-size: 36px;
+    }
     &-list{
         &__card{
             &__iten{
@@ -23,7 +31,7 @@
                 }
                 &__button{
                     width: 144px;
-                    height: 24px;
+                    height: 32px;
                     background-color: variaveis.$CorFundoButton;
                     font-size: 16px;
                 }

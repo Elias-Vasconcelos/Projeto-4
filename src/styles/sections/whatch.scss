@@ -1,0 +1,27 @@
+@use '../config/variaveis.scss';
+@use '../config/reset.scss';
+
+.whatch{
+    &-list{
+        &__button{
+            border: none;
+            background-color: transparent;
+            color: variaveis.$CorFundoButton ;
+            font-size: 24px;
+            border-width: 35px;
+            cursor: pointer;
+        }
+    }
+    
+    &-content{
+        list-style: none;
+        &__item{
+            &__card{
+                &__img{
+                    width: 400px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

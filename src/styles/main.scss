@@ -3,6 +3,8 @@
 @use './config/variaveis.scss';
 @use './sections/hero.scss';
 @use './sections/plans.scss';
+@use './sections/whatch.scss';
+
 
 body{
     background-color: variaveis.$CorDeFundo;
