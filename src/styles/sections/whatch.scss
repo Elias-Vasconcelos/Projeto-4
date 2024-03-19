@@ -10,9 +10,13 @@
             font-size: 24px;
             border-width: 35px;
             cursor: pointer;
+            padding: 4px;
+            &--active {
+                border: 1px solid variaveis.$CorFundoButton;
+                border-radius: 37px;
+            }
         }
     }
-    
     &-content{
         list-style: none;
         &__item{
@@ -20,6 +24,7 @@
                 &__img{
                     width: 400px;
                     height: 200px;
+                    border-radius: 16px;
                 }
             }
         }

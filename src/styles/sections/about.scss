@@ -1,0 +1,26 @@
+@use '../config/variaveis.scss';
+@use '../config/reset.scss';
+
+.about{
+    &-content{
+        &__iten{
+            &__title{
+                list-style: none;
+                font-size: 48px;
+                color: variaveis.$CorFundoButton;
+                text-align: center;
+                padding-bottom: 48px ;
+            }
+            &__text{
+                list-style: none;
+                font-size: 16px;
+                color: variaveis.$CorDaLetra ;
+                text-align: center;
+            }
+            &__img{
+                width: 648px;
+                height: 360px;
+            }
+        }
+    }
+}
