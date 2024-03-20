@@ -146,6 +146,7 @@
 }
 .about{
     height: 100vh;
+    margin-bottom: 150px;
     &-content{
         display: grid;
         grid-template-columns: repeat(2, 40% );
@@ -154,4 +155,53 @@
         justify-content: center;
         align-items: center;
     }
+}
+.watch-anywhere{
+    height: 100vh;
+    
+    &-content{
+        display: grid;
+        grid-template-columns: repeat(2, 40% );
+        justify-content: center;
+        padding: 150px 85px 100px 85px;
+        align-items: center;
+        &__iten{
+            &__img{
+                width: 464px;
+                height: 664px;
+            }
+            &__title{
+                font-size: 56px;
+                img{
+                    width: 48px ;
+                }
+            }
+        }
+    }
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(4, 25% );
+        justify-content: center;
+        padding: 150px 32px 32px 32px;
+        align-items: center;
+        list-style: none;
+        &__iten{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            &__img{
+                max-width: 208px;
+                margin-bottom: 32px;
+                display: block;
+            }
+            &__title{
+                font-size: 21px;
+                padding-bottom: 16px;
+            }
+            &__text{
+            font-size: 16px;
+            }
+    }
+}
 }
