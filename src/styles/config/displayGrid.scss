@@ -205,3 +205,14 @@
     }
 }
 }
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px 85px 100px 85px;
+    
+    &__img{
+        display: block;
+        
+    }
+}
