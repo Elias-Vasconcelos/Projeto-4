@@ -158,7 +158,7 @@
 }
 .watch-anywhere{
     height: 100vh;
-    
+    margin-bottom: 88px;
     &-content{
         display: grid;
         grid-template-columns: repeat(2, 40% );
@@ -204,6 +204,26 @@
             }
     }
 }
+}
+.faq{
+    height:  70vh;
+    margin-bottom: 88px;
+    padding: 0 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-lis{
+        &__item{
+            margin-bottom: 16px;
+            &__question{
+                padding: 24px;
+            }
+            &__answer{
+                padding: 24px;
+            }
+        }
+    }
 }
 .footer{
     display: flex;

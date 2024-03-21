@@ -1,0 +1,21 @@
+@use '../config/variaveis.scss';
+@use '../config/reset.scss';
+
+.faq{
+    &-lis{
+        &__item{
+            background-color: variaveis.$FaqColor;
+            &__question{
+                font-size: 24px;
+                cursor: pointer;
+                display: block;
+                color: variaveis.$CorDaLetra;
+            }
+            &__answer{
+                line-height: 16px;
+                font-size: 12px;
+                color: variaveis.$SmallText;
+            }
+        }
+    }
+}
