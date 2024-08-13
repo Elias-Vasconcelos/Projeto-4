@@ -1,8 +1,8 @@
-@use './src/styles/config/variaveis.scss';
+@use "./src/styles/config/variaveis.scss";
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: variaveis.$FonteTexto ;
-        list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: variaveis.$FonteTexto;
+  list-style: none;
 }

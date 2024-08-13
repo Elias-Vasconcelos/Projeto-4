@@ -1,14 +1,60 @@
-@use './config/displayGrid.scss';
-@use './config/reset.scss';
-@use './config/variaveis.scss';
-@use './sections/hero.scss';
-@use './sections/plans.scss';
-@use './sections/whatch.scss';
-@use './sections/about.scss';
-@use './sections/watchAnywhere.scss';
-@use './sections/Faq.scss';
+@use "./config/displayGrid.scss";
+@use "./config/reset.scss";
+@use "./config/variaveis.scss";
+@use "./sections/hero.scss";
+@use "./sections/plans.scss";
+@use "./sections/whatch.scss";
+@use "./sections/about.scss";
+@use "./sections/watchAnywhere.scss";
+@use "./sections/Faq.scss";
+@use "./sections/footer.scss";
 
+body {
+  background-color: variaveis.$CorDeFundo;
+}
+.header {
+  position: sticky;
+  background: rgb(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transition: opacity 2.5 ease;
 
-body{
-    background-color: variaveis.$CorDeFundo;
+  nav {
+    width: 80%;
+    height: 60px;
+  }
+  &-buttons {
+    &-sub {
+      width: 150px;
+      padding: 12px;
+      margin-right: 8px;
+      background-color: variaveis.$CorDeFundo;
+      border-radius: 36px;
+      border: 0.5px solid variaveis.$CorFundoButton;
+      text-transform: uppercase;
+      color: variaveis.$CorFundoButton;
+      transition: opacity 2.5 ease;
+    }
+    &-sing {
+      width: 120px;
+      padding: 12px;
+      background-color: variaveis.$CorFundoButton;
+      border: 1px solid variaveis.$CorFundoButton;
+      border-radius: 36px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: opacity 2.5 ease;
+    }
+  }
+  &--on-site {
+    .header-title {
+      visibility: hidden;
+      transition: opacity 2.5 ease;
+    }
+    .header-buttons-sub {
+      visibility: hidden;
+      transition: ease-in-out;
+    }
+  }
 }

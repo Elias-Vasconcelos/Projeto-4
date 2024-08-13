@@ -1,6 +1,31 @@
+@use '../config/variaveis.scss';
+@use '../config/reset.scss';
+
 .footer{
+
     &__img{
         display: block;
-        
     }
+    &__list{
+        &__select{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__options{
+                background: transparent;
+                border-radius: 36px;
+                color: white;
+                margin-right: 10px;
+                border: none;
+                option{
+                    background: variaveis.$CorDeFundo;
+                }
+            }
+            &__img{
+                width: 36px;
+                margin-right: 6px;
+            }
+        }
+    }
+
 }

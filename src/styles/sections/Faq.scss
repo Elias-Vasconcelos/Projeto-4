@@ -2,19 +2,41 @@
 @use '../config/reset.scss';
 
 .faq{
+    &-h2{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        color: variaveis.$CorFundoButton;
+        font-size: 36px;
+        padding-bottom: 36px;
+    }
     &-lis{
         &__item{
             background-color: variaveis.$FaqColor;
             &__question{
-                font-size: 24px;
+                font-size: 16px;
                 cursor: pointer;
                 display: block;
                 color: variaveis.$CorDaLetra;
+                &::after{
+                    font-size: 40px;
+                    color: variaveis.$CorDaLetra;
+                }
             }
             &__answer{
                 line-height: 16px;
                 font-size: 12px;
                 color: variaveis.$SmallText;
+                transition: 1.5s ease;
+            }
+            &--is-active{
+                .faq-lis__item__question::after{
+                    content: '-' ;
+                }
+                .faq-lis__item__answer{
+                    transition: 1.5s ease;
+                }
             }
         }
     }

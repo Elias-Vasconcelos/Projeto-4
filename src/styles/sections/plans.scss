@@ -2,14 +2,21 @@
 @use '../config/reset.scss';
 
 .plans{
-    
-    h4{
+
+    &__title{
         display: flex;
         width: 100%;
         text-align: center;
         justify-content: center;
         color: variaveis.$CorFundoButton;
         font-size: 36px;
+    }
+    &__subtitle{
+        font-size: 24px;
+        text-align: center;
+        color: variaveis.$SmallText ;
+        list-style: none;
+        padding-bottom: 16px;
     }
     &-list{
         &__card{
