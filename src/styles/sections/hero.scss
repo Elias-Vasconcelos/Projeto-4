@@ -115,7 +115,7 @@
       &:hover {
         img {
           z-index: -1;
-          scale: 99%;
+          transform: scale(1.2);
         }
       }
     }
