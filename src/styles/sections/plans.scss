@@ -1,6 +1,65 @@
 @use '../config/variaveis.scss';
 @use '../config/reset.scss';
 
+
+// Grid da secao
+.plans {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 400px);
+      padding: 36px 35px 100px 35px;
+      justify-content: center;
+      gap: 32px;
+      text-align: center;
+      &__card {
+        &__iten {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          transition: 2.5s;
+  
+          &:hover {
+            scale: 109%;
+          }
+          &__text {
+            position: relative;
+            z-index: 2;
+          }
+          &__title {
+            padding-top: 65px;
+            padding-left: 16px;
+            text-align: start;
+          }
+          &__price {
+            padding-top: 8px;
+            padding-left: 88px;
+            text-align: start;
+          }
+          &__caption {
+            width: 70%;
+            padding-top: 16px;
+            padding-bottom: 8px;
+          }
+          &__button {
+            justify-content: center;
+            border: none;
+            border-radius: 24px;
+            align-items: start;
+            margin-right: 120px;
+          }
+          &__img {
+            position: absolute;
+            max-width: 400px;
+            margin: 0 auto;
+            align-items: start;
+          }
+        }
+      }
+    }
+  }
+
+
+// estilo dos componentes
 .plans{
 
     &__title{

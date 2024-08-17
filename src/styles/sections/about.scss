@@ -1,6 +1,20 @@
 @use '../config/variaveis.scss';
 @use '../config/reset.scss';
 
+
+// grid da sacao
+.about {
+    margin-bottom: 150px;
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(2, 40%);
+      column-gap: 10%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+// estilo dos componentes
 .about{
     &-content{
         &__iten{

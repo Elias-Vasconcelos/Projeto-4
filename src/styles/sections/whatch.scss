@@ -1,6 +1,31 @@
 @use '../config/variaveis.scss';
 @use '../config/reset.scss';
 
+// Grid da secao
+.whatch {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 400px);
+      gap: 36px;
+      padding: 70px 35px 104px 35px;
+      justify-content: center;
+    }
+    &-content {
+      display: none;
+  
+      &--active {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(2, 200px);
+        gap: 36px;
+        padding: 0 35px 150px 35px;
+        justify-content: center;
+      }
+    }
+  }
+
+
+// estilo dos componentes
 .whatch{
     &-list{
         &__button{

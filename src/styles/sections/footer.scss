@@ -1,6 +1,36 @@
 @use '../config/variaveis.scss';
 @use '../config/reset.scss';
 
+
+// grid da secao 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 85px 100px 85px;
+    align-items: center;
+    color: white;
+    &__img {
+      display: block;
+      width: 150px;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      a {
+        text-decoration: none;
+        color: white;
+        margin-right: 10px;
+      }
+    }
+    &__text {
+      text-align: center;
+    }
+  }
+
+// estilisacao dos componentes 
 .footer{
 
     &__img{

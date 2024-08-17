@@ -1,6 +1,50 @@
 @use '../config/variaveis.scss';
 @use '../config/reset.scss';
 
+// grid da secao 
+.faq {
+    margin-top: 5%;
+    margin-bottom: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-lis {
+      &__item {
+        margin-bottom: 16px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 16px;
+        &__question {
+          &::after {
+            content: "+";
+            display: flex;
+            position: absolute;
+            align-items: center;
+            top: 0;
+            right: 24px;
+            height: 100%;
+          }
+          padding: 24px;
+        }
+        &__answer {
+          height: 0;
+          overflow: hidden;
+        }
+        &--is-active {
+          .faq-lis__item__question::after {
+            content: "-";
+          }
+          .faq-lis__item__answer {
+            padding: 24px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+// estilisacao dos componentes 
 .faq{
     &-h2{
         display: flex;

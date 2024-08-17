@@ -1,4 +1,3 @@
-@use "./config/displayGrid.scss";
 @use "./config/reset.scss";
 @use "./config/variaveis.scss";
 @use "./sections/hero.scss";
@@ -19,6 +18,26 @@ body {
   left: 0;
   z-index: 4;
   transition: opacity 2.5 ease;
+
+  nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-title {
+    transition: opacity 2.5 ease;
+    &__img {
+      width: 100px;
+      transition: opacity 2.5 ease;
+    }
+  }
+  &-buttons {
+    &-sub {
+      width: 120px;
+      padding: 12px;
+    }
+  }
 
   nav {
     width: 80%;

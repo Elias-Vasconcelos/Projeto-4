@@ -1,7 +1,91 @@
 @use "../config/variaveis.scss";
 @use "../config/reset.scss";
 
+
 .hero {
+  display: grid;
+  grid-template-columns: 312px 640px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1049px ) {
+    max-width: 560px;
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    &__caption__title {
+      width: 60%;
+    }
+
+    &__img {
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+
+  &-characters {
+    max-width: 640px;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(10%, 120px));
+    gap: 3px;
+    justify-items: center;
+
+    &__itens {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      img {
+        z-index: 1;
+        border-radius: 15px;
+        transition: 2s;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      &__text {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        position: absolute;
+        z-index: 0;
+        top: 40;
+        left: 0;
+        h2 {
+          padding-bottom: 25px;
+        }
+      }
+      &:hover {
+        img {
+          z-index: -1;
+          scale: 99%;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+
   &__content {
     align-items: center;
 
