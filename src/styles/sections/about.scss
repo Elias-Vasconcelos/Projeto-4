@@ -1,41 +1,68 @@
-@use '../config/variaveis.scss';
-@use '../config/reset.scss';
-
+@use "../config/variaveis.scss";
+@use "../config/reset.scss";
 
 // grid da sacao
 .about {
-    margin-bottom: 150px;
-    &-content {
-      display: grid;
-      grid-template-columns: repeat(2, 40%);
-      column-gap: 10%;
+  margin-top: 85px;
+  @media screen and (max-width: 1050px) {
+    margin-top: 45px;
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding-bottom: 55px;
+
+    @media screen and (max-width: 1050px) {
+      grid-template-columns: 1fr;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+  }
+  #reverse {
+    @media screen and (max-width: 1050px) {
+      display: flex;
+      flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
     }
   }
+}
 
 // estilo dos componentes
-.about{
-    &-content{
-        &__iten{
-            &__title{
-                list-style: none;
-                font-size: 48px;
-                color: variaveis.$CorFundoButton;
-                text-align: center;
-                padding-bottom: 48px ;
-            }
-            &__text{
-                list-style: none;
-                font-size: 16px;
-                color: variaveis.$CorDaLetra ;
-                text-align: center;
-                line-height: 20px;
-            }
-            &__img{
-                width: 648px;
-                height: 360px;
-            }
+.about {
+  &-content {
+    &__iten {
+      display: grid;
+      justify-content: center;
+      &__title {
+        list-style: none;
+        font-size: 38px;
+        color: variaveis.$CorFundoButton;
+        text-align: center;
+        padding-bottom: 48px;
+        @media screen and (max-width: 1050px) {
+          padding-bottom: 24px;
         }
+      }
+      &__text {
+        list-style: none;
+        font-size: 14px;
+        color: variaveis.$CorDaLetra;
+        text-align: center;
+        line-height: 20px;
+        @media screen and (max-width: 1050px) {
+          padding-bottom: 12px;
+        }
+      }
+      &__img {
+        width: 424px;
+        height: 285px;
+        border-radius: 12px;
+      }
     }
+  }
 }

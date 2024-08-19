@@ -1,87 +1,103 @@
-@use '../config/variaveis.scss';
-@use '../config/reset.scss';
+@use "../config/variaveis.scss";
+@use "../config/reset.scss";
 
-// grid da secao 
+// grid da secao
 .faq {
-    margin-top: 5%;
-    margin-bottom: 88px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &-lis {
-      &__item {
-        margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 80px;
+
+  @media screen and (max-width: 1050px) {
+    max-width: 560px;
+  }
+
+  &-lis {
+    &__item {
+      margin-bottom: 16px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 16px;
+      transition: ease-in-out;
+      &__question {
+        @media screen and (max-width: 1050px) {
+          h2 {
+            font-size: 16px;
+          }
+        }
+        &::after {
+          content: "+";
+          display: flex;
+          position: absolute;
+          align-items: center;
+          top: 0;
+          right: 24px;
+          height: 100%;
+          transition: ease-in-out;
+        }
+        padding: 24px;
+      }
+      &__answer {
+        height: 0;
         overflow: hidden;
-        position: relative;
-        border-radius: 16px;
-        &__question {
-          &::after {
-            content: "+";
-            display: flex;
-            position: absolute;
-            align-items: center;
-            top: 0;
-            right: 24px;
-            height: 100%;
-          }
+        transition: ease-in-out;
+      }
+      &--is-active {
+        .faq-lis__item__question::after {
+          content: "-";
+          transition: ease-in-out;
+        }
+        .faq-lis__item__answer {
           padding: 24px;
-        }
-        &__answer {
-          height: 0;
-          overflow: hidden;
-        }
-        &--is-active {
-          .faq-lis__item__question::after {
-            content: "-";
-          }
-          .faq-lis__item__answer {
-            padding: 24px;
-            height: auto;
-          }
+          height: auto;
+          transition: ease-in-out;
         }
       }
     }
   }
+}
 
-// estilisacao dos componentes 
-.faq{
-    &-h2{
-        display: flex;
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        color: variaveis.$CorFundoButton;
-        font-size: 36px;
-        padding-bottom: 36px;
-    }
-    &-lis{
-        &__item{
-            background-color: variaveis.$FaqColor;
-            &__question{
-                font-size: 16px;
-                cursor: pointer;
-                display: block;
-                color: variaveis.$CorDaLetra;
-                &::after{
-                    font-size: 40px;
-                    color: variaveis.$CorDaLetra;
-                }
-            }
-            &__answer{
-                line-height: 16px;
-                font-size: 12px;
-                color: variaveis.$SmallText;
-                transition: 1.5s ease;
-            }
-            &--is-active{
-                .faq-lis__item__question::after{
-                    content: '-' ;
-                }
-                .faq-lis__item__answer{
-                    transition: 1.5s ease;
-                }
-            }
+// estilisacao dos componentes
+.faq {
+  &-h2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    color: variaveis.$CorFundoButton;
+    font-size: 36px;
+    padding-bottom: 36px;
+  }
+  &-lis {
+    &__item {
+      background-color: variaveis.$FaqColor;
+      &__question {
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        color: variaveis.$CorDaLetra;
+        &::after {
+          font-size: 40px;
+          color: variaveis.$CorDaLetra;
         }
+      }
+      &__answer {
+        line-height: 16px;
+        font-size: 12px;
+        color: variaveis.$SmallText;
+        transition: 1.5s ease;
+      }
+      &--is-active {
+        .faq-lis__item__question::after {
+          content: "-";
+        }
+        .faq-lis__item__answer {
+          transition: 1.5s ease;
+        }
+      }
     }
+  }
 }
